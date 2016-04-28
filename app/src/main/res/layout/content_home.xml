@@ -15,20 +15,20 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText_user"
+        android:id="@+id/email"
         android:layout_centerHorizontal="true"
         android:hint="@string/email"
-        android:layout_above="@+id/editText_password" />
+        android:layout_above="@+id/password" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText_password"
+        android:id="@+id/password"
         android:hint="@string/paswword"
         android:layout_above="@+id/button_login"
-        android:layout_alignStart="@+id/editText_user" />
+        android:layout_alignStart="@+id/email" />
 
     <Button
         android:layout_width="wrap_content"
@@ -38,8 +38,10 @@
         android:textColor="#f6f6fa"
         android:background="#4465e9"
         android:layout_above="@+id/text_forgot"
-        android:layout_alignStart="@+id/editText_password"
-        android:layout_alignEnd="@+id/editText_password" />
+        android:layout_alignStart="@+id/password"
+        android:layout_alignEnd="@+id/password"
+        android:clickable="true"
+        android:onClick="loginOnClick" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,17 +53,19 @@
         android:textColor="#1d72b4"
         android:layout_marginBottom="119dp"
         android:layout_above="@+id/text_register"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="forgotOnClick" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:layout_above="@+id/editText_user"
+        android:layout_above="@+id/email"
         android:src="@drawable/logo2"
         android:nestedScrollingEnabled="false"
-        android:layout_alignEnd="@+id/editText_user"
-        android:layout_alignStart="@+id/editText_user" />
+        android:layout_alignEnd="@+id/email"
+        android:layout_alignStart="@+id/email" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,6 +75,7 @@
         android:id="@+id/text_register"
         android:layout_marginBottom="72dp"
         android:clickable="true"
+        android:onClick="registerOnClick"
         android:textColor="#3e51ca"
         android:singleLine="false"
         android:layout_alignParentBottom="true"

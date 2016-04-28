@@ -26,4 +26,7 @@
     <string name="btn_login">Login</string>
     <string name="forgot">Lupa Password ?</string>
     <string name="register">Daftar Akun Baru</string>
+    <string name="title_activity_egister">egister</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

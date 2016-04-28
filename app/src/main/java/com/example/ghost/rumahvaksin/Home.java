@@ -1,5 +1,6 @@
 package com.example.ghost.rumahvaksin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,25 +13,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+        //private EditText email;
+        //private EditText password;
+        public static final String USER_NAME = "USERNAME";
 
+    //String email;
+    //String password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -98,4 +96,36 @@ public class Home extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void registerOnClick(View view){
+        Intent intent = new Intent(Home.this,Register.class);
+        startActivity(intent);
+    }
+
+    public  void loginOnClick(View view){
+        Intent intent = new Intent(Home.this,Profil.class);
+        startActivity(intent);
+    }
+
+    public void resetOnClick(View view){
+        Intent intent = new Intent(Home.this,Home.class);
+        startActivity(intent);
+    }
+
+    public void forgotOnClick(View view){
+        Intent intent = new Intent(Home.this,Forgot.class);
+        startActivity(intent);
+    }
+
+   // public void mapsOnClick(View view){
+   //     Intent intent = new Intent(Home.this,Maps.class);
+   //     startActivity(intent);
+   // }
+
+  //  public void profilOnClick(View view){
+  //      Intent intent = new Intent(Home.this,Profil.class);
+  //      startActivity(intent);
+  //  }
+
+
 }

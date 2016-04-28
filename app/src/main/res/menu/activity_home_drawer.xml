@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_action_person"
-            android:title="Profil Anak" />
+            android:title="Profil Anak"/>
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_action_important"
@@ -29,7 +29,7 @@
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_action_about"
-                android:title="Tenteng" />
+                android:title="Tentang" />
         </menu>
     </item>
 
